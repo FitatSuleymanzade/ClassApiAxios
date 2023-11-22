@@ -6,6 +6,20 @@ const formbutton = document.getElementById('formbutton')
 const avatarDiv = document.querySelector('.avatar')
 const formid = document.getElementById('formid')
 
+
+
+axios.post("https://655c30a1ab37729791aa03c7.mockapi.io/sdu/students",{
+           name: name.value,
+           surname: surname.value,
+           age: age.value,
+           studentID: studentID.value
+})
+.then(response => {
+    console.log(response.data);
+})
+});
+    
+
 axios.get("https://655c30a1ab37729791aa03c7.mockapi.io/sdu/students")
 .then((res) => {
     const students = res.data;
